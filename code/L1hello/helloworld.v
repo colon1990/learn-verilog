@@ -1,7 +1,7 @@
-module hello();
+module hello;
     initial
         begin
-            $display("Hello world from haidh16, chip design");
+            $display("Hello world from haidh16: chip design class ");
             $finish;
         end
 endmodule

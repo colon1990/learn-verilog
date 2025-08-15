@@ -7,11 +7,11 @@
 :vpi_module "C:\ICARUS~1\lib\ivl\vhdl_textio.vpi";
 :vpi_module "C:\ICARUS~1\lib\ivl\v2005_math.vpi";
 :vpi_module "C:\ICARUS~1\lib\ivl\va_math.vpi";
-S_0000020852d429c0 .scope module, "hello" "hello" 2 1;
+S_000001f026dc2ad0 .scope module, "hello" "hello" 2 1;
  .timescale 0 0;
-    .scope S_0000020852d429c0;
+    .scope S_000001f026dc2ad0;
 T_0 ;
-    %vpi_call 2 4 "$display", "Hello world from haidh16, chip design" {0 0 0};
+    %vpi_call 2 4 "$display", "Hello world from haidh16: chip design class " {0 0 0};
     %vpi_call 2 5 "$finish" {0 0 0};
     %end;
     .thread T_0;

@@ -7,112 +7,144 @@
 :vpi_module "C:\ICARUS~1\lib\ivl\vhdl_textio.vpi";
 :vpi_module "C:\ICARUS~1\lib\ivl\v2005_math.vpi";
 :vpi_module "C:\ICARUS~1\lib\ivl\va_math.vpi";
-S_00000283cb7d6b50 .scope module, "full_adder" "full_adder" 2 1;
+S_0000022ac5cc5360 .scope module, "full_adder_4bit_tb" "full_adder_4bit_tb" 2 27;
+ .timescale 0 0;
+v0000022ac5ca2ba0_0 .var "a", 3 0;
+v0000022ac5ca2c40_0 .var "b", 3 0;
+v0000022ac5ca2ce0_0 .var "c_in", 0 0;
+v0000022ac5ca2d80_0 .net "c_out", 0 0, v0000022ac5ca2a60_0;  1 drivers
+v0000022ac5c1db50_0 .var/i "i", 31 0;
+v0000022ac5c1dbf0_0 .net "sum", 3 0, v0000022ac5ca2b00_0;  1 drivers
+S_0000022ac5c1b480 .scope module, "uut" "full_adder_4bit_v2" 2 37, 2 13 0, S_0000022ac5cc5360;
  .timescale 0 0;
     .port_info 0 /INPUT 4 "a";
     .port_info 1 /INPUT 4 "b";
     .port_info 2 /INPUT 1 "c_in";
     .port_info 3 /OUTPUT 1 "c_out";
     .port_info 4 /OUTPUT 4 "sum";
-L_00000283cb8368a0 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
-v00000283cb7b3400_0 .net *"_ivl_10", 0 0, L_00000283cb8368a0;  1 drivers
-v00000283cb7b3090_0 .net *"_ivl_11", 4 0, L_00000283cb7e3620;  1 drivers
-v00000283cb79db60_0 .net *"_ivl_13", 4 0, L_00000283cb7e3da0;  1 drivers
-L_00000283cb8368e8 .functor BUFT 1, C4<0000>, C4<0>, C4<0>, C4<0>;
-v00000283cb79dc00_0 .net *"_ivl_16", 3 0, L_00000283cb8368e8;  1 drivers
-v00000283cb79dca0_0 .net *"_ivl_17", 4 0, L_00000283cb7e3300;  1 drivers
-v00000283cb79dd40_0 .net *"_ivl_3", 4 0, L_00000283cb7e3440;  1 drivers
-L_00000283cb836858 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
-v00000283cb79dde0_0 .net *"_ivl_6", 0 0, L_00000283cb836858;  1 drivers
-v00000283cb79de80_0 .net *"_ivl_7", 4 0, L_00000283cb7e3e40;  1 drivers
-o00000283cb7ec138 .functor BUFZ 4, C4<zzzz>; HiZ drive
-v00000283cb79df20_0 .net "a", 3 0, o00000283cb7ec138;  0 drivers
-o00000283cb7ec168 .functor BUFZ 4, C4<zzzz>; HiZ drive
-v00000283cb7e3760_0 .net "b", 3 0, o00000283cb7ec168;  0 drivers
-o00000283cb7ec198 .functor BUFZ 1, C4<z>; HiZ drive
-v00000283cb7e38a0_0 .net "c_in", 0 0, o00000283cb7ec198;  0 drivers
-v00000283cb7e3580_0 .net "c_out", 0 0, L_00000283cb7e3d00;  1 drivers
-v00000283cb7e39e0_0 .net "sum", 3 0, L_00000283cb7e3120;  1 drivers
-L_00000283cb7e3d00 .part L_00000283cb7e3300, 4, 1;
-L_00000283cb7e3120 .part L_00000283cb7e3300, 0, 4;
-L_00000283cb7e3440 .concat [ 4 1 0 0], o00000283cb7ec138, L_00000283cb836858;
-L_00000283cb7e3e40 .concat [ 4 1 0 0], o00000283cb7ec168, L_00000283cb8368a0;
-L_00000283cb7e3620 .arith/sum 5, L_00000283cb7e3440, L_00000283cb7e3e40;
-L_00000283cb7e3da0 .concat [ 1 4 0 0], o00000283cb7ec198, L_00000283cb8368e8;
-L_00000283cb7e3300 .arith/sum 5, L_00000283cb7e3620, L_00000283cb7e3da0;
-S_00000283cb7d6ce0 .scope module, "full_adder_tb" "full_adder_tb" 2 30;
- .timescale 0 0;
-v00000283cb7e34e0_0 .var "a", 3 0;
-v00000283cb7e3940_0 .var "b", 3 0;
-v00000283cb7e3b20_0 .var "c_in", 0 0;
-v00000283cb7e3c60_0 .net "c_out", 0 0, v00000283cb7e36c0_0;  1 drivers
-v00000283cb7e3080_0 .var/i "i", 31 0;
-v00000283cb7e31c0_0 .net "sum", 3 0, v00000283cb7e3800_0;  1 drivers
-S_00000283cb7b29c0 .scope module, "fa0" "full_adderv2" 2 39, 2 15 0, S_00000283cb7d6ce0;
+v0000022ac5ca3400_0 .net "a", 3 0, v0000022ac5ca2ba0_0;  1 drivers
+v0000022ac5ca3090_0 .net "b", 3 0, v0000022ac5ca2c40_0;  1 drivers
+v0000022ac5ca29c0_0 .net "c_in", 0 0, v0000022ac5ca2ce0_0;  1 drivers
+v0000022ac5ca2a60_0 .var "c_out", 0 0;
+v0000022ac5ca2b00_0 .var "sum", 3 0;
+E_0000022ac5c19110 .event anyedge, v0000022ac5ca3400_0, v0000022ac5ca3090_0, v0000022ac5ca29c0_0;
+S_0000022ac5c1b2f0 .scope module, "full_adder_4bit_v1" "full_adder_4bit_v1" 2 1;
  .timescale 0 0;
     .port_info 0 /INPUT 4 "a";
     .port_info 1 /INPUT 4 "b";
     .port_info 2 /INPUT 1 "c_in";
     .port_info 3 /OUTPUT 1 "c_out";
     .port_info 4 /OUTPUT 4 "sum";
-v00000283cb7e3bc0_0 .net "a", 3 0, v00000283cb7e34e0_0;  1 drivers
-v00000283cb7e2fe0_0 .net "b", 3 0, v00000283cb7e3940_0;  1 drivers
-v00000283cb7e3a80_0 .net "c_in", 0 0, v00000283cb7e3b20_0;  1 drivers
-v00000283cb7e36c0_0 .var "c_out", 0 0;
-v00000283cb7e3800_0 .var "sum", 3 0;
-E_00000283cb7d9ca0 .event anyedge, v00000283cb7e3a80_0, v00000283cb7e2fe0_0, v00000283cb7e3bc0_0;
-    .scope S_00000283cb7b29c0;
+L_0000022ac5d27cc0 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0000022ac5d26b30_0 .net *"_ivl_10", 0 0, L_0000022ac5d27cc0;  1 drivers
+v0000022ac5d26f90_0 .net *"_ivl_11", 4 0, L_0000022ac5d26a90;  1 drivers
+v0000022ac5d27030_0 .net *"_ivl_13", 4 0, L_0000022ac5d268b0;  1 drivers
+L_0000022ac5d27d08 .functor BUFT 1, C4<0000>, C4<0>, C4<0>, C4<0>;
+v0000022ac5d270d0_0 .net *"_ivl_16", 3 0, L_0000022ac5d27d08;  1 drivers
+v0000022ac5d26db0_0 .net *"_ivl_17", 4 0, L_0000022ac5d27530;  1 drivers
+v0000022ac5d27170_0 .net *"_ivl_3", 4 0, L_0000022ac5d26c70;  1 drivers
+L_0000022ac5d27c78 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0000022ac5d27210_0 .net *"_ivl_6", 0 0, L_0000022ac5d27c78;  1 drivers
+v0000022ac5d273f0_0 .net *"_ivl_7", 4 0, L_0000022ac5d275d0;  1 drivers
+o0000022ac5cde368 .functor BUFZ 4, C4<zzzz>; HiZ drive
+v0000022ac5d269f0_0 .net "a", 3 0, o0000022ac5cde368;  0 drivers
+o0000022ac5cde398 .functor BUFZ 4, C4<zzzz>; HiZ drive
+v0000022ac5d27490_0 .net "b", 3 0, o0000022ac5cde398;  0 drivers
+o0000022ac5cde3c8 .functor BUFZ 1, C4<z>; HiZ drive
+v0000022ac5d272b0_0 .net "c_in", 0 0, o0000022ac5cde3c8;  0 drivers
+v0000022ac5d26950_0 .net "c_out", 0 0, L_0000022ac5d277b0;  1 drivers
+v0000022ac5d26e50_0 .net "sum", 3 0, L_0000022ac5d26bd0;  1 drivers
+L_0000022ac5d277b0 .part L_0000022ac5d27530, 4, 1;
+L_0000022ac5d26bd0 .part L_0000022ac5d27530, 0, 4;
+L_0000022ac5d26c70 .concat [ 4 1 0 0], o0000022ac5cde368, L_0000022ac5d27c78;
+L_0000022ac5d275d0 .concat [ 4 1 0 0], o0000022ac5cde398, L_0000022ac5d27cc0;
+L_0000022ac5d26a90 .arith/sum 5, L_0000022ac5d26c70, L_0000022ac5d275d0;
+L_0000022ac5d268b0 .concat [ 1 4 0 0], o0000022ac5cde3c8, L_0000022ac5d27d08;
+L_0000022ac5d27530 .arith/sum 5, L_0000022ac5d26a90, L_0000022ac5d268b0;
+    .scope S_0000022ac5c1b480;
 T_0 ;
-    %wait E_00000283cb7d9ca0;
-    %load/vec4 v00000283cb7e3bc0_0;
+    %wait E_0000022ac5c19110;
+    %load/vec4 v0000022ac5ca3400_0;
     %pad/u 5;
-    %load/vec4 v00000283cb7e2fe0_0;
+    %load/vec4 v0000022ac5ca3090_0;
     %pad/u 5;
     %add;
-    %load/vec4 v00000283cb7e3a80_0;
+    %load/vec4 v0000022ac5ca29c0_0;
     %pad/u 5;
     %add;
     %split/vec4 4;
-    %store/vec4 v00000283cb7e3800_0, 0, 4;
-    %store/vec4 v00000283cb7e36c0_0, 0, 1;
+    %store/vec4 v0000022ac5ca2b00_0, 0, 4;
+    %store/vec4 v0000022ac5ca2a60_0, 0, 1;
     %jmp T_0;
     .thread T_0, $push;
-    .scope S_00000283cb7d6ce0;
+    .scope S_0000022ac5cc5360;
 T_1 ;
-    %vpi_call 2 49 "$display", "TEST BENCH Combination Full Adder" {0 0 0};
+    %vpi_call 2 69 "$display", "TEST BENCH: 4-bit Full Adder" {0 0 0};
+    %vpi_call 2 70 "$monitor", "Time = %0t: a = %h, b = %h, c_in = %b, c_out = %b, sum = %h", $time, v0000022ac5ca2ba0_0, v0000022ac5ca2c40_0, v0000022ac5ca2ce0_0, v0000022ac5ca2d80_0, v0000022ac5c1dbf0_0 {0 0 0};
     %pushi/vec4 0, 0, 4;
-    %assign/vec4 v00000283cb7e34e0_0, 0;
+    %store/vec4 v0000022ac5ca2ba0_0, 0, 4;
     %pushi/vec4 0, 0, 4;
-    %assign/vec4 v00000283cb7e3940_0, 0;
+    %store/vec4 v0000022ac5ca2c40_0, 0, 4;
     %pushi/vec4 0, 0, 1;
-    %assign/vec4 v00000283cb7e3b20_0, 0;
-    %vpi_call 2 54 "$finish" {0 0 0};
+    %store/vec4 v0000022ac5ca2ce0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v0000022ac5c1db50_0, 0, 32;
+T_1.0 ;
+    %load/vec4 v0000022ac5c1db50_0;
+    %cmpi/s 10, 0, 32;
+    %jmp/0xz T_1.1, 5;
+    %delay 10, 0;
+    %vpi_func 2 83 "$random" 32 {0 0 0};
+    %pad/s 4;
+    %store/vec4 v0000022ac5ca2ba0_0, 0, 4;
+    %vpi_func 2 84 "$random" 32 {0 0 0};
+    %pad/s 4;
+    %store/vec4 v0000022ac5ca2c40_0, 0, 4;
+    %vpi_func 2 85 "$random" 32 {0 0 0};
+    %pad/s 1;
+    %store/vec4 v0000022ac5ca2ce0_0, 0, 1;
+    %load/vec4 v0000022ac5c1db50_0;
+    %addi 1, 0, 32;
+    %store/vec4 v0000022ac5c1db50_0, 0, 32;
+    %jmp T_1.0;
+T_1.1 ;
+    %delay 10, 0;
+    %pushi/vec4 15, 0, 4;
+    %store/vec4 v0000022ac5ca2ba0_0, 0, 4;
+    %pushi/vec4 1, 0, 4;
+    %store/vec4 v0000022ac5ca2c40_0, 0, 4;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000022ac5ca2ce0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 15, 0, 4;
+    %store/vec4 v0000022ac5ca2ba0_0, 0, 4;
+    %pushi/vec4 15, 0, 4;
+    %store/vec4 v0000022ac5ca2c40_0, 0, 4;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0000022ac5ca2ce0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 15, 0, 4;
+    %store/vec4 v0000022ac5ca2ba0_0, 0, 4;
+    %pushi/vec4 15, 0, 4;
+    %store/vec4 v0000022ac5ca2c40_0, 0, 4;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000022ac5ca2ce0_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 4;
+    %store/vec4 v0000022ac5ca2ba0_0, 0, 4;
+    %pushi/vec4 0, 0, 4;
+    %store/vec4 v0000022ac5ca2c40_0, 0, 4;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0000022ac5ca2ce0_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 94 "$finish" {0 0 0};
     %end;
     .thread T_1;
-    .scope S_00000283cb7d6ce0;
+    .scope S_0000022ac5cc5360;
 T_2 ;
-    %vpi_call 2 63 "$monitor", "a=0x%0h b=0x%0h c_in=0x%0h c_out=0x%0h sum=0x%0h", v00000283cb7e34e0_0, v00000283cb7e3940_0, v00000283cb7e3b20_0, v00000283cb7e3c60_0, v00000283cb7e31c0_0 {0 0 0};
-    %pushi/vec4 0, 0, 32;
-    %store/vec4 v00000283cb7e3080_0, 0, 32;
-T_2.0 ;
-    %load/vec4 v00000283cb7e3080_0;
-    %cmpi/s 5, 0, 32;
-    %jmp/0xz T_2.1, 5;
-    %delay 10, 0;
-    %vpi_func 2 67 "$random" 32 {0 0 0};
-    %pad/s 4;
-    %assign/vec4 v00000283cb7e34e0_0, 0;
-    %vpi_func 2 68 "$random" 32 {0 0 0};
-    %pad/s 4;
-    %assign/vec4 v00000283cb7e3940_0, 0;
-    %vpi_func 2 69 "$random" 32 {0 0 0};
-    %pad/s 1;
-    %assign/vec4 v00000283cb7e3b20_0, 0;
-    %load/vec4 v00000283cb7e3080_0;
-    %addi 1, 0, 32;
-    %store/vec4 v00000283cb7e3080_0, 0, 32;
-    %jmp T_2.0;
-T_2.1 ;
+    %vpi_call 2 99 "$dumpfile", "L2.Full_adder_4bit.vcd" {0 0 0};
+    %vpi_call 2 100 "$dumpvars", 32'sb00000000000000000000000000000000, S_0000022ac5cc5360 {0 0 0};
     %end;
     .thread T_2;
 # The file index is used to find the file name in the following table.

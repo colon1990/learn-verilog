@@ -1,0 +1,4 @@
+# out extensions
+*.out
+*.v.out
+*.vcd

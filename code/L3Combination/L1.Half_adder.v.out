@@ -7,55 +7,61 @@
 :vpi_module "C:\ICARUS~1\lib\ivl\vhdl_textio.vpi";
 :vpi_module "C:\ICARUS~1\lib\ivl\v2005_math.vpi";
 :vpi_module "C:\ICARUS~1\lib\ivl\va_math.vpi";
-S_000002a549ba9e80 .scope module, "half_adder_tb" "half_adder_tb" 2 12;
+S_000001faba99b770 .scope module, "half_adder_tb" "half_adder_tb" 2 11;
  .timescale 0 0;
-v000002a549babf30_0 .var "a", 0 0;
-v000002a549cab840_0 .var "b", 0 0;
-v000002a549cab8e0_0 .net "carry", 0 0, L_000002a549ba6dc0;  1 drivers
-v000002a549cab980_0 .net "sum", 0 0, L_000002a549ba8d90;  1 drivers
-S_000002a549baa010 .scope module, "uut" "half_adder" 2 17, 2 1 0, S_000002a549ba9e80;
+v000001faba9b2a60_0 .var "a", 0 0;
+v000001faba9b2b00_0 .var "b", 0 0;
+v000001faba9b2ba0_0 .net "carry", 0 0, L_000001faba9e6380;  1 drivers
+v000001faba9b2c40_0 .net "sum", 0 0, L_000001faba9995c0;  1 drivers
+S_000001faba99b310 .scope module, "uut" "half_adder" 2 16, 2 1 0, S_000001faba99b770;
  .timescale 0 0;
     .port_info 0 /INPUT 1 "a";
     .port_info 1 /INPUT 1 "b";
     .port_info 2 /OUTPUT 1 "sum";
     .port_info 3 /OUTPUT 1 "carry";
-L_000002a549ba8d90 .functor XOR 1, v000002a549babf30_0, v000002a549cab840_0, C4<0>, C4<0>;
-L_000002a549ba6dc0 .functor AND 1, v000002a549babf30_0, v000002a549cab840_0, C4<1>, C4<1>;
-v000002a549baa1a0_0 .net "a", 0 0, v000002a549babf30_0;  1 drivers
-v000002a549ba7160_0 .net "b", 0 0, v000002a549cab840_0;  1 drivers
-v000002a549ba8cf0_0 .net "carry", 0 0, L_000002a549ba6dc0;  alias, 1 drivers
-v000002a549babe90_0 .net "sum", 0 0, L_000002a549ba8d90;  alias, 1 drivers
-    .scope S_000002a549ba9e80;
+L_000001faba9995c0 .functor XOR 1, v000001faba9b2a60_0, v000001faba9b2b00_0, C4<0>, C4<0>;
+L_000001faba9e6380 .functor AND 1, v000001faba9b2a60_0, v000001faba9b2b00_0, C4<1>, C4<1>;
+v000001faba99b4a0_0 .net "a", 0 0, v000001faba9b2a60_0;  1 drivers
+v000001faba9b3160_0 .net "b", 0 0, v000001faba9b2b00_0;  1 drivers
+v000001faba999520_0 .net "carry", 0 0, L_000001faba9e6380;  alias, 1 drivers
+v000001faba9b29c0_0 .net "sum", 0 0, L_000001faba9995c0;  alias, 1 drivers
+    .scope S_000001faba99b770;
 T_0 ;
-    %vpi_call 2 26 "$display", "TEST BENCH Combination Half Adder" {0 0 0};
+    %vpi_call 2 25 "$display", "TEST BENCH Combination Half Adder" {0 0 0};
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v000002a549babf30_0, 0, 1;
+    %store/vec4 v000001faba9b2a60_0, 0, 1;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v000002a549cab840_0, 0, 1;
+    %store/vec4 v000001faba9b2b00_0, 0, 1;
     %delay 10, 0;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v000002a549babf30_0, 0, 1;
+    %store/vec4 v000001faba9b2a60_0, 0, 1;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v000002a549cab840_0, 0, 1;
+    %store/vec4 v000001faba9b2b00_0, 0, 1;
     %delay 10, 0;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v000002a549babf30_0, 0, 1;
+    %store/vec4 v000001faba9b2a60_0, 0, 1;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v000002a549cab840_0, 0, 1;
+    %store/vec4 v000001faba9b2b00_0, 0, 1;
     %delay 10, 0;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v000002a549babf30_0, 0, 1;
+    %store/vec4 v000001faba9b2a60_0, 0, 1;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v000002a549cab840_0, 0, 1;
+    %store/vec4 v000001faba9b2b00_0, 0, 1;
     %delay 10, 0;
-    %vpi_call 2 32 "$finish" {0 0 0};
+    %vpi_call 2 31 "$finish" {0 0 0};
     %end;
     .thread T_0;
-    .scope S_000002a549ba9e80;
+    .scope S_000001faba99b770;
 T_1 ;
-    %vpi_call 2 36 "$monitor", "Time=%0t: a=%b, b=%b, sum=%b, carry=%b", $time, v000002a549babf30_0, v000002a549cab840_0, v000002a549cab980_0, v000002a549cab8e0_0 {0 0 0};
+    %vpi_call 2 35 "$monitor", "Time = %0t: a = %b, b = %b, sum = %b, carry = %b", $time, v000001faba9b2a60_0, v000001faba9b2b00_0, v000001faba9b2c40_0, v000001faba9b2ba0_0 {0 0 0};
     %end;
     .thread T_1;
+    .scope S_000001faba99b770;
+T_2 ;
+    %vpi_call 2 41 "$dumpfile", "L1.Half_adder.vcd" {0 0 0};
+    %vpi_call 2 42 "$dumpvars", 32'sb00000000000000000000000000000000, S_000001faba99b770 {0 0 0};
+    %end;
+    .thread T_2;
 # The file index is used to find the file name in the following table.
 :file_names 3;
     "N/A";
